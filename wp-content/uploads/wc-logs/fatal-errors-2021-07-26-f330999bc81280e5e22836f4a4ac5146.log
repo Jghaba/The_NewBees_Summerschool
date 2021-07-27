@@ -1,0 +1,14 @@
+2021-07-26T17:50:44+00:00 CRITICAL syntax error, unexpected ''employee'' (T_CONSTANT_ENCAPSED_STRING), expecting variable (T_VARIABLE) in C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\functions.php on line 259
+
+2021-07-26T17:54:44+00:00 CRITICAL syntax error, unexpected '`', expecting variable (T_VARIABLE) in C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\functions.php on line 259
+
+2021-07-26T17:56:44+00:00 CRITICAL syntax error, unexpected '`', expecting variable (T_VARIABLE) in C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\functions.php on line 259
+
+2021-07-26T21:11:57+00:00 CRITICAL Uncaught Error: Object of class WP_User could not be converted to string in C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-societatile-mele.php:46
+Stack trace:
+#0 C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Andre\\...')
+#2 C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Andre\\...')
+#3 {main}
+  thrown in C:\Users\Andre\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-societatile-mele.php on line 46
+
