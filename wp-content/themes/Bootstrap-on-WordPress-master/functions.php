@@ -255,3 +255,18 @@
 			<?php endif;
 		}
 	}
+
+
+	add_role( 'employee', 'Employee ' , [
+			'read'         => true,  // true allows this capability
+			'edit_dashboard'   => false,
+		]
+	);
+
+	add_role('company', 'Company', [
+			'read' => true,
+			'edit_dashboard' => false,
+		]
+	);
+
+	
