@@ -47,9 +47,12 @@
     // echo($id);
     $employers=get_field('employee_companies','user_'.$id); //in cazul de fata, va scoate un array, fiecare angajat putand fi la mai multe companii
     //functia va contine id-urile companiilor
-
-    //echo(var_dump($employers));
+    if(count($employers)==0){
+        echo("Se pare ca nu esti angajat la vreo companie. "."<a href='apply-for-company.php'> Apasati aici </a> pentru a aplica la prima companie.");
+    }else{
     
+    //echo(var_dump($employers));
+    echo("<a href='../page-apply-for-company.php'> Apasati aici </a> pentru a aplica la prima companie.");
     echo("<ul>"); //tag-ul html pentru lista neordonata: https://www.w3schools.com/tags/tag_ul.asp
     foreach ($employers as &$value) {
         $name=get_user_by('id', $value); //obtinem utilizatorul cu id-ul dat
@@ -57,6 +60,7 @@
 
     }
     echo("</ul");
+    }
 ?>
 
 

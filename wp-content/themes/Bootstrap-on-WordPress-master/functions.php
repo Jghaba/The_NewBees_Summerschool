@@ -269,4 +269,13 @@
 		]
 	);
 
+	function create_request($company, $employee){
+		$post_id = wp_insert_post([
+			'post_type' => "employee_request",
+		]);
+		update_post_meta($post_id, 'employee', $employee);
+		update_post_meta($post_id, 'company', $company);
+		//adaug custom field
+	}
+
 	
