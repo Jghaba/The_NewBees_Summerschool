@@ -1,5 +1,2 @@
 <?php 
-
-$user = wp_get_current_user();
-
-echo var_dump($user->roles);
+update_field("company-employees", 6,2);
