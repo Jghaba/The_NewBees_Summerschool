@@ -32,23 +32,21 @@
 </div>
 
 <?php
-
-$current_user=wp_get_current_user();
-
-$args = array(
-    'role'    => 'company',
-    'orderby' => 'user_nicename',
-    'order'   => 'ASC'
-);
-$users = get_users( $args );
-
-echo '<ul>';
-foreach ( $users as $user ) {
-    echo '<li>' . esc_html( $user->display_name ) . '[' . esc_html( $user->user_email ) . ']</li>';
-    echo ("<button onclick='create_request(".$user->id.",".$current_user->id.")' >Aplicati</button>");
-}
-echo '</ul>';
+$url = home_url('add-product');
 ?>
+
+<form action="<?= $url ?>" method="post">
+  <div class="form-group">
+    <label>Numele:</label>
+    <input class="form-control" name="numele" >
+  </div>
+  
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+
 
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',
