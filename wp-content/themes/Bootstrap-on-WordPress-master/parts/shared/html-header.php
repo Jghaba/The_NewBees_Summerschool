@@ -11,5 +11,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 		<?php wp_head(); ?>
+    <link rel="stylesheet"  href="<?php if(function_exists("get_p_style")) echo 'http://localhost/wp-content/themes/Bootstrap-on-WordPress-master/css/'.get_p_style().'.css'; ?>">
   </head>
 <body <?php body_class(); ?>>
+
