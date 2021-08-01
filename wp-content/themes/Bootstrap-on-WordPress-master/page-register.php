@@ -25,4 +25,3 @@ function get_p_style(){
 </div>
 <?php BsWp::get_template_parts( array('parts/shared/html-footer') ); ?>
 
-
