@@ -35,16 +35,37 @@
 $url = home_url('add-product');
 ?>
 
-<form action="<?= $url ?>" method="post">
+<form action="<?= $url ?>" method="post" >
   <div class="form-group">
-    <label>Numele:</label>
-    <input class="form-control" name="numele" >
+    <label>Product Name: </label>
+    <input class="form-control" name="product_name" >
   </div>
-  
+
+   <div class="form-group">
+	  <label>Regular Price</label>
+	  <input type="text" class="form-control" name="regular_price">
+  </div>
+
+  <div class="form-group">
+	<label>Stock Quantity: </label>
+	<input type="text" class="form-control" name="product-stock">
+  </div>
+
+  <div class="form-group">
+	  <label>Weight: </label>
+	  <input type="text" class="form-control" name="product_weight">
+  </div>
+
+  <div class="form-group">
+	  <label>Add Images Here: </label>
+	  <input type="file" class="form-control" name="product_images" id="product_images" multiple=true accept="image/*">
+  </div>
+	
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
+  
 </form> 
 
 
