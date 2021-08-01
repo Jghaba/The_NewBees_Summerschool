@@ -13,3 +13,4 @@ wp_verify_nonce($_POST['wp_nonce_field'], 'wp_nonce'))){
       wp_insert_post( $post_information, $wp_error );
    }
 }
+?>
