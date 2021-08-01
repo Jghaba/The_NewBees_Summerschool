@@ -1,0 +1,6 @@
+2021-08-01T15:55:07+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in E:\Downloads\Scoala de vara\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-register.php on line 6
+
+2021-08-01T15:55:42+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in E:\Downloads\Scoala de vara\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\parts\shared\html-header.php on line 13
+
+2021-08-01T17:23:27+00:00 CRITICAL require_once(): Failed opening required 'config.php' (include_path='.;E:/Downloads/laragon/etc/php/pear') in E:\Downloads\Scoala de vara\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-register.php on line 30
+

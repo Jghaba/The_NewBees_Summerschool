@@ -280,6 +280,7 @@
 		wp_send_json("a mers");
 		wp_die();
 	}
+	add_filter('show_admin_bar', '__return_false');
 
 	
 	

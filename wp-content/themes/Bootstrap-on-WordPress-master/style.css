@@ -1,12 +1,3 @@
-/*!
-Theme Name: 	Bootsrap on WordPress
-Theme URI: 		https://bootstraponwordpress.com/
-Description: 	Bootstrap 5 on Wordpress
-Version: 		3.0.6
-Author: 		Babobski
-Author URI: 	https://www.babobski.nl
-Tags: 			babobski, bootstrap, basic theme
-*/
 
 .tab {
     overflow: hidden;
@@ -42,6 +33,7 @@ Tags: 			babobski, bootstrap, basic theme
     border: 1px solid #ccc;
     border-top: none;
   }
+
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:wght@300&display=swap');
 
   :root{
@@ -77,45 +69,3 @@ Tags: 			babobski, bootstrap, basic theme
      font-size: 72px;
      font-weight: 300;
    }
-
-  .wrapper{
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:"top";
-  }
-   .top{
-    grid-area: top;
-    background-image: linear-gradient(to right,var(--overlayStart),var(--overlayEnd)),url(images/fundal.jpg);
-    background-size: cover;
-    background-position:center;
-    background-repeat:no-repeat ;
-    display: grid;
-    grid-template-columns: 1fr 600px 600px 1 fr;
-    grid: gap 20px;
-    grid-template-areas:
-    ". top_content top_profile ." ;
-
-  }
-  .top_content {
-    grid-area: top_content;
-    align-self: center;
-    justify-self: center;
-    padding :10px;
-  }
-  .subtitle{
-    font-family: "Open Sans",sans-serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom:  20px;
-  }
-  .title{
-    margin-bottom: 80px;
-  }
-  
-  .top_profile {
-    grid-area: top_profile;
-  }
-  

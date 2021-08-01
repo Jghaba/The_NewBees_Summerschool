@@ -1,7 +1,13 @@
+<?php
+function get_p_style(){
+  return 'custom-login-style';
+}
+?>
+
 <head>
     <style>
         h2 {
-            color:purple;
+            color:orange;
             size: 45 px;
         }
 
@@ -30,7 +36,7 @@
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
-	'parts/shared/header' 
+
 ) ); ?>
 
 
@@ -52,9 +58,6 @@
 	'parts/shared/footer',
 	'parts/shared/html-footer' 
 ) ); ?>
-
-
-
 
 
 </body>

@@ -1,0 +1,76 @@
+.required{
+    text-decoration-color: rgb(31, 255, 1);
+}
+.register{
+    text-size-adjust: 22px;
+    color: white;
+    font-size: 30px;
+}
+.input-text{
+    border: 2px solid rgb(31, 255, 1);
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Lato';
+    padding: 10px;
+}
+.input-email{
+    border: 2px solid rgb(31, 255, 1);
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Lato';
+    padding: 10px;
+}
+
+.input-password{
+    border: 2px solid rgb(31, 255, 1);
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Lato';
+    padding: 10px;
+}
+.tabcontent{
+    color: rgb(255, 255, 255);
+    margin: 50px auto;
+    text-align: center;
+    width: 600px;
+    border: none;
+    text-align-last: center;
+}
+.btn button ur-submit-button {
+    padding: 10px;
+    font-size: 2rem;
+    font-family: 'Lato';
+    font-weight: 100;
+    background: rgb(31, 255, 1);
+    color: rgb(31, 255, 1);
+    border: rgb(31, 255, 1);
+}
+.tablinks{
+    font-size: 1rem;
+    border: 2px solid rgb(31, 255, 1);
+}
+.user-registration{
+    border: 2px solid rgb(31, 255, 1);
+    text-size-adjust: 2px;
+}
+body{
+    background: url(../images/font.jpeg);
+    margin: 50px auto;
+    text-align: center;
+    width: 800px;
+   
+   
+}
+.tablinks{
+    border: 3px solid rgb(31, 255, 1);
+    text-align: center;
+    font-weight: 200;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.tab{
+    color:black
+}
