@@ -8,7 +8,7 @@
  *
  */
 body.login {
-  background-image: url("../images/debut_light.png");
+  background-image: url("../images/WhatsApp\ Image\ 2021-08-03\ at\ 14.35.18.jpeg");
 }
 
 .login h1 a {
@@ -71,9 +71,8 @@ body.login {
   .login h1.admin-email__heading {
     color: whitesmoke;
   }
-  .login h1 a {
-    background-image: url("../images/elem.png");
-    background-size: contain;
+  .login{
+    background-image:url(../images/WhatsApp\ Image\ 2021-08-03\ at\ 14.35.18.jpeg);
   }
   .login label {
     font-size: 0.8rem;
@@ -108,4 +107,18 @@ body.login {
     border: 1px solid #262626;
     box-shadow: none;
   }
+}
+body{
+  background: url(../images/WhatsApp\ Image\ 2021-08-03\ at\ 14.35.18.jpeg);
+    margin: 50px auto;
+    background-size: cover;
+    text-align: center;
+    width: 800px;
+}
+.content{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: 'Lato';
+  color: black;
 }
