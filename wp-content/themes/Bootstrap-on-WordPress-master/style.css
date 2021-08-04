@@ -39,10 +39,10 @@
   :root{
     --accent: #de677e;
     --light: #B4BFE3;
-    --lightText: #97A0BE;
-    --dark: #373756;
+    --lightText: #2c428a;
+    --dark: #d6e226;
     --overlayStart: rgba(55,55,86,.9);
-    --overlayEnd: rgba(55,55,86,.7);
+    --overlayEnd: rgba(232, 232, 240, 0.7);
     --ease: all 0.3s ease 0s;
    }
    *{
