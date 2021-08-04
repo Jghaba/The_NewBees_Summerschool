@@ -36,7 +36,7 @@ function get_p_style(){
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
-
+    
 ) ); ?>
 
 

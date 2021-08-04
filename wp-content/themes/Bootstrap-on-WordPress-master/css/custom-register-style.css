@@ -1,20 +1,20 @@
 .required{
-    text-decoration-color: rgb(31, 255, 1);
+    text-decoration-color: black;
 }
 .register{
     text-size-adjust: 22px;
-    color: white;
+    color: black;
     font-size: 30px;
 }
 .input-text{
-    border: 2px solid rgb(31, 255, 1);
+    border: 2px solid black;
     font-size: 2rem;
     font-weight: 100;
     font-family: 'Lato';
     padding: 10px;
 }
 .input-email{
-    border: 2px solid rgb(31, 255, 1);
+    border: 2px solid black;
     font-size: 2rem;
     font-weight: 100;
     font-family: 'Lato';
@@ -22,7 +22,7 @@
 }
 
 .input-password{
-    border: 2px solid rgb(31, 255, 1);
+    border: 2px solid black;
     font-size: 2rem;
     font-weight: 100;
     font-family: 'Lato';
@@ -33,38 +33,53 @@
     margin: 50px auto;
     text-align: center;
     width: 600px;
-    border: none;
     text-align-last: center;
 }
-.btn button ur-submit-button {
-    padding: 10px;
-    font-size: 2rem;
+.btn{
+    
+    font-size: 1.2rem;
     font-family: 'Lato';
-    font-weight: 100;
-    background: rgb(31, 255, 1);
-    color: rgb(31, 255, 1);
-    border: rgb(31, 255, 1);
+    font-weight: 200;
+    color: black; 
+    border: 3px solid black ;
 }
-.tablinks{
-    font-size: 1rem;
-    border: 2px solid rgb(31, 255, 1);
+.button{
+    
+    font-size: 1.2rem;
+    font-family: 'Lato';
+    font-weight: 200;
+    color: black; 
+    border: 2px solid black !important;
 }
+.ur-submit-button{
+    
+    font-size: 1.2rem;
+    font-family: 'Lato';
+    font-weight: 200;
+    color: black; 
+    border: 3px solid black ;
+}
+
 .user-registration{
-    border: 2px solid rgb(31, 255, 1);
-    text-size-adjust: 2px;
+    border: 2px solid black;
+    text-size-adjust: 3px;
 }
 body{
-    background: url(../images/font.jpeg);
+    background: url(../images/WhatsApp\ Image\ 2021-08-03\ at\ 14.35.18.jpeg);
     margin: 50px auto;
+    background-size: cover;
     text-align: center;
     width: 800px;
    
    
 }
 .tablinks{
-    border: 3px solid rgb(31, 255, 1);
+    border: 3px solid black;
     text-align: center;
-    font-weight: 200;
+    font-weight: bold;
+    font-family: 'Lato';
+    font-size: 1.2rem;
+    word-spacing: 10px;
 }
 * {
     padding: 0;
@@ -72,5 +87,13 @@ body{
     box-sizing: border-box;
 }
 .tab{
-    color:black
+    color:black;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 2rem;
+    
+}
+.tabcontent{
+    background:white;
+    color:black !important;
 }
