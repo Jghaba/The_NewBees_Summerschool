@@ -21,12 +21,12 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
   }
 
-function create_request(company, employee){
+function create_request(r_company, r_employee){
     jQuery.ajax({
       type: "POST",
       action: "request",
-      data: {"company":company, "employee":employee},
-
+      data: {company:r_company, employee:r_employee},
+      
     success: function (obj, textstatus) {
                   if( !(false) ) {
                       yourVariable = obj.result;

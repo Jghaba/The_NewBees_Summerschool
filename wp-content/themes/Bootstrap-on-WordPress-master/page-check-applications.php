@@ -60,10 +60,30 @@
     if (isset($_GET['request_id'])) {
         $request_id=(int)$_GET['request_id'];
         var_dump($request_id);
-        var_dump(get_field('employee', $request_id));
-        $is_updated = update_field('company_employees', get_field("employee", $request_id), "user_".$user->ID);
+        var_dump((int)get_field('employee', $request_id));
+
+        $employee_list=(array)(get_field("company_employees", "user_".$user->ID));
+        array_push($employee_list, (int)get_field("employee", $request_id));
+        var_dump($employee_list);
+
+        $is_updated = update_field('company_employees', $employee_list, "user_".$user->ID);
+        update_field("employee_companies", $user->ID, "user_".(int)get_field('employee', $request_id));
+        wp_delete_post($request_id);
         echo($user->ID);
         var_dump($is_updated);
+        echo("<br>");
+/*
+        $employee_list=get_post_meta($user->ID)["company_employees"];
+        var_dump($employee_list); echo("<br> <br>");
+        array_push($employee_list, (int)get_field("employee", $request_id)); //append new employee to list of employees 
+        var_dump($employee_list);
+
+        echo("<br>");
+        update_post_meta($user->ID, "company_employees", (int)get_field("employee", $request_id)); //update employee list with new employee
+        update_post_meta($user->ID, "_company-employees", (int)get_field("employee", $request_id));
+        var_dump(get_post_meta($user->ID));
+        echo("<br><br>\n"); */
+        var_dump(get_field("company_employees","user_".$user->ID));
         
     }
 ?>

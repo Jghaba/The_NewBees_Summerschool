@@ -48,7 +48,7 @@ $url = home_url('add-product');
 
   <div class="form-group">
 	<label>Stock Quantity: </label>
-	<input type="text" class="form-control" name="product-stock">
+	<input type="text" class="form-control" name="product_stock">
   </div>
 
   <div class="form-group">
