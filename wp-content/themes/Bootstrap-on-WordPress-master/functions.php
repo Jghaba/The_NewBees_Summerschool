@@ -270,5 +270,15 @@
 	);
 
 	add_filter('show_admin_bar', '__return_false');
+	
+	function add_order_owner($order_id){ //functia asta adauga ca 'order_owner' pe compania care detine produsele comandate
+		$order=wc_get_order($order_id);
+		$order_product=($order->get_items()[1]); //obtinem primul produs din comanda, din care scoatem owner-ul	
+		$product_owner=get_field('owner', $order_product->get_product_id()); //obtine id-ul owner-ului pentru primul produs
+		//ignora faptul ca probabil da eroare; metoda merge si iti da id-ul produsului;
+		//repet: IGNORATI EROAREA. E O PROBLEMA CU INTELEPHENSE. FUNCTIA E OK SI MERGE
+		update_field('order_owner', $product_owner, $order_id); 
+	};
 
-	?>
+	add_action('woocommerce_new_order', 'add_order_owner', 5);
+?>
