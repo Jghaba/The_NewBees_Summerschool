@@ -47,7 +47,7 @@ function get_p_style(){
             wp_redirect(home_url());
             exit();
         }
-    };
+    }; 
 ?>
 
 
