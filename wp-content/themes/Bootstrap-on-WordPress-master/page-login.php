@@ -34,10 +34,28 @@ function get_p_style(){
  * @autor 		Babobski
  */
 ?>
+
+<?php
+    if(is_user_logged_in()){
+        $user=wp_get_current_user();
+        $roles = $user->roles;
+
+        if((in_array("company", $roles))||(in_array('employee', $roles))){
+            wp_redirect(home_url('my-account-2'));
+            exit();
+        }else{
+            wp_redirect(home_url());
+            exit();
+        }
+    };
+?>
+
+
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
     
 ) ); ?>
+
 
 
 <div class="content">
