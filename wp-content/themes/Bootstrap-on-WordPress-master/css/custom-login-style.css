@@ -89,10 +89,10 @@ body.login {
   .login input[type=password] {
     background-color: #333;
     border-color: #333;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
   }
   .login .button-primary {
-    background: #333;
+    background:#333;
     color: #FFF;
     border: 1px solid #333;
     text-shadow: none;
@@ -116,9 +116,17 @@ body{
     width: 800px;
 }
 .content{
-  text-align: center;
+  text-align:center;
   font-size: 2rem;
   font-weight: 100;
   font-family: 'Lato';
   color: black;
+}
+.h2, h2{
+  color:black;
+  font-weight: bold;
+  font-size: larger;
+  background: white;
+  border-bottom: black;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
 }
