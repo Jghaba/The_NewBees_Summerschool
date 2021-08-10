@@ -279,6 +279,25 @@
 		//repet: IGNORATI EROAREA. E O PROBLEMA CU INTELEPHENSE. FUNCTIA E OK SI MERGE
 		update_field('order_owner', $product_owner, $order_id); 
 	};
-
+	function check_stock($order_id){
+		$order=wc_get_order($order_id);
+		$order_products=($order->get_items());
+		foreach($order_products as &$order_product){
+			$product_id=$order_product->get_product_id(); //obtinem id-ul produsului actual
+			$product=wc_get_product($product_id);
+			//acum ca avem produsul ca obiect, vom verifica stocul sau. Daca este sub 10, de exemplu, vom creea o postare de tip notificare pt owner-ul produsului 
+			if($product->get_stock_quantity()>=$product->get_low_stock_amount()){
+				$product_owner=get_fieldS('owner', $product_id);
+				wp_insert_post([
+					'post_type'=>'notification',
+					'post_title'=>'Low stock warning: '.$product->get_title(),
+					'post_content'=>'Your stock of product #'.$product->get_id().":".$product->get_title().'has fallen below'.$product->get_low_stock_amount().". You might consider restocking.",
+					'meta_key'=>'notification_user',
+					'meta_value'=>$product_owner,
+				]);
+			}
+		}
+	};
 	add_action('woocommerce_new_order', 'add_order_owner', 5);
+	add_action('woocommerce_new_order', 'check_stock', 7);
 ?>
