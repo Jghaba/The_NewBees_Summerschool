@@ -1,24 +1,4 @@
 <?php
-function get_p_style(){
-  return 'custom-login-style';
-}
-?>
-
-<head>
-    <style>
-        h2 {
-            color:orange;
-            size: 45 px;
-        }
-
-        .content{
-            text-align:center;
-        }
-    </style>
-</head>
-
-<body>
-<?php
 /**
  * The template for displaying all pages.
  *
@@ -34,29 +14,10 @@ function get_p_style(){
  * @autor 		Babobski
  */
 ?>
-
-<?php
-    if(is_user_logged_in()){
-        $user=wp_get_current_user();
-        $roles = $user->roles;
-
-        if((in_array("company", $roles))||(in_array('employee', $roles))){
-            wp_redirect(home_url('my-account-2'));
-            exit();
-        }else{
-            wp_redirect(home_url());
-            exit();
-        }
-    }; 
-?>
-
-
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
-    
+	'parts/shared/header' 
 ) ); ?>
-
-
 
 <div class="content">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -70,12 +31,24 @@ function get_p_style(){
 	<?php endwhile; ?>
 </div>
 
+<?php
+    $user=wp_get_current_user();
 
+    $orders = wc_get_orders(array(
+        'posts_per_page'	=> -1,
+        'post_type'		=> 'shop_order',
+		'meta_key'		=> 'order_owner',
+        'meta_value'    => $user->id,       
+    ));
+
+	echo("<ul>");
+    foreach($orders as &$order){
+        echo '<li>Order #'.$order->get_id().'| '.$order->get_billing_first_name().' '.$order->get_billing_last_name().'| Amount: '.($order->get_total()+0).$order->get_currency().' | Status: '.$order->get_status().'</li>';
+    }
+    echo("</ul>");
+?>
 
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',
 	'parts/shared/html-footer' 
 ) ); ?>
-
-
-</body>
