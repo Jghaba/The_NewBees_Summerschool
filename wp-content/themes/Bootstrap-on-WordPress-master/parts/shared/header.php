@@ -7,15 +7,17 @@
 		<div class="collapse navbar-collapse" id="primaryNav">
 			<?php
 			wp_nav_menu( array(
-				'menu'          	=> 'primary',
+				'menu'          	=> 'header-menu',
+				'menu_class'        => 'header-menu',
+				'items_wrap'        => '<ul class="%2$s">%3$s</ul>',
+				'container_class'   => 'header-menu-container',
 				'theme_location'	=> 'primary',
 				'depth'         	=> 2,
 				'container'			=> false,
 				'menu_class'    	=> 'navbar-nav me-auto',
 				'fallback_cb'   	=> '__return_false',
-				'walker'         	=> new bootstrap_5_wp_nav_menu_walker())
-
-			);
+				'walker'         	=> new bootstrap_5_wp_nav_menu_walker()
+			));
 			?>
 			<?php get_search_form(); ?>
 		</div>

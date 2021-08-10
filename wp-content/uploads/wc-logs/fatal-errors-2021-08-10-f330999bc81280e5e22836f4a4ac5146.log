@@ -1,0 +1,6 @@
+2021-08-10T12:43:04+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in D:\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-check-applications.php on line 50
+
+2021-08-10T12:43:40+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in D:\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-check-applications.php on line 50
+
+2021-08-10T12:45:51+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting ';' or ',' in D:\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-check-applications.php on line 58
+
