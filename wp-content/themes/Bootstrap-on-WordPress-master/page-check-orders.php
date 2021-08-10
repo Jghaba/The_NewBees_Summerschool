@@ -37,12 +37,13 @@
     $orders = wc_get_orders(array(
         'posts_per_page'	=> -1,
         'post_type'		=> 'shop_order',
-       
+		'meta_key'		=> 'order_owner',
+        'meta_value'    => $user->id,       
     ));
 
-    echo("<ul>");
+	echo("<ul>");
     foreach($orders as &$order){
-        echo '<li>'.$order->post_title.'</li>';
+        echo '<li>Order #'.$order->get_id().'| '.$order->get_billing_first_name().' '.$order->get_billing_last_name().'| Amount: '.($order->get_total()+0).$order->get_currency().' | Status: '.$order->get_status().'</li>';
     }
     echo("</ul>");
 ?>
