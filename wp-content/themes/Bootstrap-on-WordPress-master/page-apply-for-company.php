@@ -13,6 +13,10 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+
+function get_p_style() {
+	return 'custom-apply-for-comp';
+}
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -41,13 +45,14 @@ $args = array(
     'order'   => 'ASC'
 );
 $users = get_users( $args );
-
+echo('<div id= company-list>');
 echo '<ul>';
 foreach ( $users as $user ) {
     echo '<li>' . esc_html( $user->display_name ) . '[' . esc_html( $user->user_email ) . ']</li>';
     echo ("<button onclick='create_request($user->id, $current_user->id)' >Aplicati</button>");
 }
 echo '</ul>';
+echo '</div>';
 ?>
 
 <?php BsWp::get_template_parts( array( 
@@ -62,6 +67,4 @@ echo '</ul>';
 	]);
 	update_post_meta($post_id, 'employee', $_POST['employee']);
 	update_post_meta($post_id, 'company', $_POST['company']);
-	wp_send_json("a mers");
-	wp_die();
 ?>

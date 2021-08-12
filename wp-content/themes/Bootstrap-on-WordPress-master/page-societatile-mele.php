@@ -22,6 +22,9 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+function get_p_style(){
+    return 'custom-societati';
+}
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -42,7 +45,7 @@
 
 
 <?php
-    //segmentul acesta ia id-ul utilizatorului (angajatului), apoi vede la ce companii este angajat, apoi le printeaza una cate una intr-o liste neordonata
+    //segmentul acesta ia id-ul utilizatorului (angajatului), apoi vede la ce companii este angajat, apoi le printeaza una cate una intr-o lista neordonata
     $id=get_current_user_id();
     // echo($id);
     $employers=get_field('employee_companies','user_'.$id); //in cazul de fata, va scoate un array, fiecare angajat putand fi la mai multe companii
@@ -52,7 +55,10 @@
     }else{
     
     //echo(var_dump($employers));
+    echo('<div id= spatiu>');
     echo("<a href='../page-apply-for-company.php'> Apasati aici </a> pentru a aplica la prima companie.");
+    echo('</div>'); 
+    echo('<div id= societati-list>');
     echo("<ul>"); //tag-ul html pentru lista neordonata: https://www.w3schools.com/tags/tag_ul.asp
     foreach ($employers as &$value) {
         $name=get_user_by('id', $value); //obtinem utilizatorul cu id-ul dat
@@ -60,6 +66,7 @@
 
     }
     echo("</ul");
+    echo('</div>');
     }
 ?>
 

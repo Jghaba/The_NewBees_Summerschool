@@ -1,0 +1,22 @@
+#societati-list{
+    box-sizing: border-box;
+    width: 300px;
+    border: 10px solid black;
+    padding: 40px;
+    margin: 70px;
+    margin-left: 20px;
+    background-color: #fff;
+    box-shadow: 0 20px 0 0 black;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+}
+#spatiu{
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: large;
+    list-style-type: square;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
