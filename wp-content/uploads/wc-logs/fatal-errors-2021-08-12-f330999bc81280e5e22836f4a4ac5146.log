@@ -1,0 +1,52 @@
+2021-08-12T06:31:01+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 4
+
+2021-08-12T06:37:35+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:38:50+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:40:54+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:42:18+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:42:49+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:43:07+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-12T06:44:50+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:45:31+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-12T06:46:06+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:46:44+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:47:21+00:00 CRITICAL syntax error, unexpected end of file in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-12T06:48:24+00:00 CRITICAL syntax error, unexpected end of file in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-12T06:48:33+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:49:50+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:52:18+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-12T06:52:37+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-12T06:53:04+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-12T06:55:12+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-12T06:55:39+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T06:59:37+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T07:03:40+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T07:05:40+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T07:05:47+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-12T07:05:54+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 9
+
+2021-08-12T07:06:32+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
