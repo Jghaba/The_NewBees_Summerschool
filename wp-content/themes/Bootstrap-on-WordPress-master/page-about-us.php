@@ -44,7 +44,7 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}  
 .background_unseen{
-    background-color: pink;
+    background-color:blue;
 }
         </style>
     </head>
@@ -97,47 +97,49 @@ var_dump($order->get_items());
 /*
 $post=get_post(126);
 var_dump($post->post_type);
-
-
-
-$orders = get_posts(array(
-    'posts_per_page'	=> -1,
-    "post_type"		=> 'shop_order',
-));
-
-var_dump($orders);
-
-$orders = wc_get_orders([
-    'numberposts'    => -1, //tb sa folosesc functia de la ei
-    'post_type'      => 'shop_order',
-]);
-var_dump($orders);
 */
+
+
+
 $notifications=get_posts([
     'post_type'=>'notification',
 ]); ?>
 
 <div class="dropdown">
-  <input type="image" src="src="https://img.icons8.com/material-rounded/24/000000/appointment-reminders.png" class="dropbtn">
+  <button type="image" src="src="https://img.icons8.com/material-rounded/24/000000/appointment-reminders.png" class="dropbtn"></button>
   <div class="dropdown-content">
  
 <?php
 foreach($notifications as &$notification){
-    echo('<div class="'.((get_field('seen', $notification->id)==0 ?"background_unseen":"background_seen").'">'));
-    echo "<a href=#><h4>".$notification->post_title."</h4>";
+    if(get_field('seen', $notification->ID)==0){
+      echo('<div class="background_unseen" id="div'.$notification->ID.'">');
+    }else echo('<div id="div'.$notification->ID.'">');
+    echo "<h4 onmouseover='mark_as_seen(".$notification->ID.");refresh_element(".$notification->ID.")'>".$notification->post_title."</h4>";
     echo $notification->post_content."</a>";
     echo('</div>');
 }
 ?>
+
+
+
 </div>
 </div> 
 
-<input type="image">
 
 
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',
 	'parts/shared/html-footer' 
-) ); ?>
+) ); 
+?>
 
+<?php
+  $notif_id=$_POST['notif_id'];
+  var_dump($notif_id);
+  update_field("seen", 1, $_POST['notif_id']);?>
+<script>
+    function refresh_element(element_id){
+      document.getElementById("div"+element_id).removeAttribute("class");
+    };
+</script>
 </html>

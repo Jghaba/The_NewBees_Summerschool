@@ -1,5 +1,4 @@
-
-console.log("string")
+console.log("string");
 function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -35,6 +34,12 @@ function create_request(r_company, r_employee){
                       console.log(obj.error);
                   }
             } 
-});
-}
+});}
+
+function mark_as_seen(notification_id){
+  jQuery.ajax({
+    type: "POST",
+    action: "mark_as_seen",
+    data: {notif_id:notification_id},
+});} 
 //ok deci la onclick, apelez la functia asta in js, care trimite o cerere la fucntia aia din php, care creeaza postarea
