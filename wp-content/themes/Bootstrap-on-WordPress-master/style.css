@@ -39,8 +39,8 @@
   :root{
     --accent: #de677e;
     --light: #B4BFE3;
-    --lightText: #2c428a;
-    --dark: #d6e226;
+    --lightText: #0d2574;
+    --dark: rgba(240, 229, 81, 0.979);
     --overlayStart: rgba(55,55,86,.9);
     --overlayEnd: rgba(232, 232, 240, 0.7);
     --ease: all 0.3s ease 0s;
@@ -68,4 +68,8 @@
      font-family: "Work Sans",sans-serif;
      font-size: 72px;
      font-weight: 300;
+   }
+   h2{
+     text-align-last: center;
+     text-decoration: underline;
    }

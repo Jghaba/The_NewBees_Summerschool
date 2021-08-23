@@ -13,6 +13,10 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+function get_p_style() {
+    return 'custom-page-check-applications';
+}
+
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -31,24 +35,16 @@
 	<?php endwhile; ?>
 </div>
 
-<?php BsWp::get_template_parts( array( 
-	'parts/shared/footer',
-	'parts/shared/html-footer' 
-) ); ?>
-
-
 <?php
 
     $user=wp_get_current_user();
-    echo($user->id);
     $posts = get_posts(array(
         'posts_per_page'	=> -1,
         'post_type'		=> 'employee_request',
         'meta_key'		=> 'company',
         'meta_value'    => $user->id,
     ));
-    echo var_dump($posts);
-
+    echo('<div id=application-list>');
     echo '<ul>';
     foreach ( $posts as $post ) {
         echo '<li>'.get_user_by("ID", get_field("employee", $post->ID))->user_login.'</li>'; //gaseste id-ul angajatului care a trimis cererea, si apoi arata numele sau
@@ -56,7 +52,7 @@
         echo '<a href=./?request_id='.$post->ID.'> acceptati </a>';
     }
     echo '</ul>';
-
+    echo('</div>');
     if (isset($_GET['request_id'])) {
         $request_id=(int)$_GET['request_id'];
         var_dump($request_id);
@@ -87,3 +83,8 @@
         
     }
 ?>
+
+<?php BsWp::get_template_parts( array( 
+	'parts/shared/footer',
+	'parts/shared/html-footer' 
+) ); ?>

@@ -23,6 +23,9 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+function get_p_style(){
+    return 'custom-angajatii-mei';
+}
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -45,6 +48,7 @@
     //codul de mai jos este practic identic cu cel de la page-societatile-mele. asta pentru ca am dat practic copy-paste de acolo si am schimbat cateva chestii.
     $id=get_current_user_id();
     $employees=get_field('company_employees','user_'.$id); 
+    echo('<div id= employee-list>');
     echo("<ul>"); 
     foreach ($employees as &$value) {
         $name=get_user_by('id', $value); //obtinem utilizatorul cu id-ul dat
@@ -52,6 +56,7 @@
 
     }
     echo("</ul");
+    echo('</div>');
 ?>
 
 
