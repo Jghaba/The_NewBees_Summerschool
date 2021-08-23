@@ -279,6 +279,31 @@
 		//repet: IGNORATI EROAREA. E O PROBLEMA CU INTELEPHENSE. FUNCTIA E OK SI MERGE
 		update_field('order_owner', $product_owner, $order_id); 
 	};
+	function new_order_notif($order_id){
+		$order=wc_get_order($order_id);
+		$order_products=$order->get_items();
+		$order_product=($order->get_items()[1]); //obtinem primul produs din comanda, din care scoatem owner-ul	
+		$product_owner=get_field('owner', $order_product->get_product_id()); //obtine id-ul owner-ului pentru primul produs
+		$order_products_and=$order_products.pop();
+		$new_order_message="A fost plasata o noua comanda pentru ";
+		if(count($order_products)<=3){
+			foreach($order_products_and as &$product){
+				$new_order_message.=$product->get_name().", ";
+			}
+			$new_order_message.="si".$order_products[-1]->get_name().'.';
+		}
+		else{
+			$new_order_message.=$order_products[0].", ".$order_products[1]." si ".($order_products.count()-2)." alte produse.";
+		}
+		wp_insert_post([
+			'post_type'=>'notification',
+			'post_title'=>'New order notification',
+			'post_content'=>$new_order_message,
+			'meta_key'=>'notification_user',
+			'meta_value'=>$product_owner,
+		]);
+	};
+
 	function check_stock($order_id){
 		$order=wc_get_order($order_id);
 		$order_products=($order->get_items());
@@ -299,5 +324,6 @@
 		}
 	};
 	add_action('woocommerce_new_order', 'add_order_owner', 5);
+	add_action('woocommerce_new_order', 'new_order_notif', 6);
 	add_action('woocommerce_new_order', 'check_stock', 7);
 ?>

@@ -68,7 +68,9 @@
 			?>
 			<?php
 			$notifications=get_posts([
-    		'post_type'=>'notification',
+    			'post_type'=>'notification',
+				'meta_key'=>'notification_user',
+				'meta_value'=>wp_get_current_user()->ID,
 			]); 
 			?>
 			<div class="dropdown">
