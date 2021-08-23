@@ -85,7 +85,6 @@
 <?php 
 $_pf = new WC_Product_Factory();
 
-
 /*
 echo(wp_get_current_user()->id);
 
@@ -118,6 +117,9 @@ foreach($notifications as &$notification){
     echo $notification->post_content."</a>";
     echo('</div>');
 }
+
+
+the_post();
 ?>
 
 
@@ -127,11 +129,8 @@ foreach($notifications as &$notification){
 
 
 
-<?php BsWp::get_template_parts( array( 
-	'parts/shared/footer',
-	'parts/shared/html-footer' 
-) ); 
-?>
+<?php /*
+
 
 <?php
   $notif_id=$_POST['notif_id'];
@@ -141,5 +140,18 @@ foreach($notifications as &$notification){
     function refresh_element(element_id){
       document.getElementById("div"+element_id).removeAttribute("class");
     };
-</script>
+</script>*/ ?>
+<div class="alert alert-info">
+  <h5><?=get_the_title()?></h5>
+  <a><?=get_the_content()?><a>
+</div>​
+
+
+
+<?php BsWp::get_template_parts( array( 
+	'parts/shared/footer',
+	'parts/shared/html-footer' 
+) );
+?>
+
 </html>
