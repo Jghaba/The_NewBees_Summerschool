@@ -1,13 +1,16 @@
-<?php 
-$products = get_posts(array( 'post_type'=> 'product'));
-
-    if ( $products->have_posts() ) {
-        echo '<ul>';
-        while ( $products->have_posts() ) : $products->the_post(); {
-            echo '<li>' .'<a href="< the_permalink(); ">< the_title(); </a>'. '</li>'; 
-        }
-        echo '</ul>';
-    } else { echo 'no posts found';}
-    
-    wp_reset_postdata();
-?>
+<ul class="product-menu">
+              <?php
+              $products = get_posts(
+                $args = array(
+                  'post_type' => 'product',
+                  'post_status' => 'publish',
+                )
+              );
+              foreach($products as &$product){
+                $wp_product= new WC_Product($product->ID);
+                echo "<li>";
+                echo '<img src="' . $wp_product->get_image() . '" alt="' . $product->post_title . '">';
+                echo "<li>";
+              }
+              wp_reset_postdata();?>
+              </ul>

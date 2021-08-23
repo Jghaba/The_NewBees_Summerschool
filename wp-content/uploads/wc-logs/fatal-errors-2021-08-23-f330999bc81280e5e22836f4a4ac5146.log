@@ -1,0 +1,84 @@
+2021-08-23T07:51:07+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-23T07:51:30+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-23T07:52:52+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-23T11:08:30+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-23T11:09:34+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-23T11:10:45+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 10
+
+2021-08-23T11:17:47+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-23T11:20:02+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-23T11:25:00+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 7
+
+2021-08-23T11:26:23+00:00 CRITICAL syntax error, unexpected '<' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 8
+
+2021-08-23T11:29:59+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:4
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 4
+
+2021-08-23T11:42:10+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Tax_Query as array in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:11
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-23T11:44:00+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:14
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 14
+
+2021-08-23T11:44:23+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:11
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-23T11:45:36+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:11
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 11
+
+2021-08-23T12:09:48+00:00 CRITICAL syntax error, unexpected '$product' (T_VARIABLE), expecting ';' or ',' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-23T12:10:33+00:00 CRITICAL syntax error, unexpected '$product' (T_VARIABLE), expecting ';' or ',' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-23T12:11:08+00:00 CRITICAL syntax error, unexpected '$product' (T_VARIABLE), expecting ';' or ',' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-23T12:14:01+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_price_html() in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:13
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 13
+
+2021-08-23T12:19:32+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_price_html() in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:12
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
+2021-08-23T12:27:28+00:00 CRITICAL syntax error, unexpected '$wp_product' (T_VARIABLE), expecting ';' or ',' in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 12
+
