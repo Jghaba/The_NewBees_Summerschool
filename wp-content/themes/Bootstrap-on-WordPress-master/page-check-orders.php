@@ -13,6 +13,9 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+function get_p_style(){
+	return 'custom-check-orders';
+}
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -40,12 +43,13 @@
 		'meta_key'		=> 'order_owner',
         'meta_value'    => $user->id,       
     ));
-
+    echo('<div id=check-orders>');
 	echo("<ul>");
     foreach($orders as &$order){
         echo '<li>Order #'.$order->get_id().'| '.$order->get_billing_first_name().' '.$order->get_billing_last_name().'| Amount: '.($order->get_total()+0).$order->get_currency().' | Status: '.$order->get_status().'</li>';
     }
     echo("</ul>");
+	echo('</div>');
 ?>
 
 <?php BsWp::get_template_parts( array( 
