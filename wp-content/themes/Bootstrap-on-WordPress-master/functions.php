@@ -284,7 +284,7 @@
 		$order_products=$order->get_items();
 		$order_product=($order->get_items()[1]); //obtinem primul produs din comanda, din care scoatem owner-ul	
 		$product_owner=get_field('owner', $order_product->get_product_id()); //obtine id-ul owner-ului pentru primul produs
-		$order_products_and=$order_products.pop();
+		$order_products_and=array_pop($order_products);
 		$new_order_message="A fost plasata o noua comanda pentru ";
 		if(count($order_products)<=3){
 			foreach($order_products_and as &$product){
@@ -293,15 +293,16 @@
 			$new_order_message.="si".$order_products[-1]->get_name().'.';
 		}
 		else{
-			$new_order_message.=$order_products[0].", ".$order_products[1]." si ".($order_products.count()-2)." alte produse.";
+			$new_order_message.=$order_products[0].", ".$order_products[1]." si ".(count($order_products)-2)." alte produse.";
 		}
-		wp_insert_post([
+		$notif_id=wp_insert_post([
 			'post_type'=>'notification',
 			'post_title'=>'New order notification',
 			'post_content'=>$new_order_message,
 			'meta_key'=>'notification_user',
 			'meta_value'=>$product_owner,
 		]);
+		do_action('new_notif_alert', $notif_id);
 	};
 
 	function check_stock($order_id){
@@ -313,17 +314,30 @@
 			//acum ca avem produsul ca obiect, vom verifica stocul sau. Daca este sub 10, de exemplu, vom creea o postare de tip notificare pt owner-ul produsului 
 			if($product->get_stock_quantity()>=$product->get_low_stock_amount()){
 				$product_owner=get_fieldS('owner', $product_id);
-				wp_insert_post([
+				$notif_id=wp_insert_post([
 					'post_type'=>'notification',
 					'post_title'=>'Low stock warning: '.$product->get_title(),
 					'post_content'=>'Your stock of product #'.$product->get_id().":".$product->get_title().'has fallen below'.$product->get_low_stock_amount().". You might consider restocking.",
 					'meta_key'=>'notification_user',
 					'meta_value'=>$product_owner,
 				]);
+				do_action('new_notif_alert', $notif_id);
 			}
 		}
 	};
+
+	function notif_alert($notif_id){
+		if(wp_get_current_user()->ID==get_field('notification_user',$notif_id)){
+			$notification=get_post($notif_id);
+			echo('<script>add_alert('.$notif_id.','.$notification->post_title.','.$notification->post_content.')</script>');
+		}
+	};
+	
+	add_action('new_notif_alert', 'notif_alert', 8);
 	add_action('woocommerce_new_order', 'add_order_owner', 5);
 	add_action('woocommerce_new_order', 'new_order_notif', 6);
 	add_action('woocommerce_new_order', 'check_stock', 7);
+
+	//todo: let companies assign orders to employees, let employees change order status 
+	//P.S. on order page, i should use the load_template function to change templates 
 ?>

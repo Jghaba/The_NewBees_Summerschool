@@ -13,6 +13,9 @@
  * @subpackage 	Bootstrap 5.0.1
  * @autor 		Babobski
  */
+function get_p_style(){
+	return 'custom-add-new';
+}
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/html-header', 
@@ -56,15 +59,15 @@ $url = home_url('add-product');
 	  <input type="text" class="form-control" name="product_weight">
   </div>
 
-  <div class="form-group">
+  <div class="form-group">	
 	  <label>Add Images Here: </label>
-	  <input type="file" class="form-control" name="product_images" id="product_images" multiple=true accept="image/*">
+	  <input type="file" class="form-control image" name="product_images" id="product_images" multiple=true accept="image/*">
   </div>
 	
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default submit">Submit</button>
   
 </form> 
 

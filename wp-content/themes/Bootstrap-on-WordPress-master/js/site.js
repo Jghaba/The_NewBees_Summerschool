@@ -42,4 +42,9 @@ function mark_as_seen(notification_id){
     action: "mark_as_seen",
     data: {notif_id:notification_id},
 });} 
+
+function add_alert(alert_id, alert_title, alert_content){
+  jQuery('#alert_placeholder').append('<div class="alert alert-info" id="alert_div'+alert_id+'"><h5>'+alert_title+'</h5><a>'+alert_content+'<a></div>');
+  jQuery("#alert_div"+alert_id).click(function(){jQuery('#alert_div'+alert_id).fadeOut(75); setTimeout(function(){jQuery('#alert_div'+alert_id).remove()},100)});
+}
 //ok deci la onclick, apelez la functia asta in js, care trimite o cerere la fucntia aia din php, care creeaza postarea
