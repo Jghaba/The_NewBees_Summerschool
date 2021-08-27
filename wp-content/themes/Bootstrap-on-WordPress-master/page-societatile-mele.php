@@ -56,17 +56,17 @@ function get_p_style(){
     // echo($id);
     $employers=get_field('employee_companies','user_'.$id); //in cazul de fata, va scoate un array, fiecare angajat putand fi la mai multe companii
     //functia va contine id-urile companiilor
-    if(count($employers)==0){
-        echo("Se pare ca nu esti angajat la vreo companie. "."<a href='apply-for-company.php'> Apasati aici </a> pentru a aplica la prima companie.");
+    if(empty($employers)||count($employers)==0){
+        echo("Se pare ca nu esti angajat la vreo companie. ".'<a href="'.home_url('apply-for-company').'"> Apasati aici </a> pentru a aplica la prima companie.');
     }else{
     
     //echo(var_dump($employers));
     echo('<div id= spatiu>');
-    echo("<a href='../page-apply-for-company.php'> Apasati aici </a> pentru a aplica la prima companie.");
+    echo('<a href="'.home_url('apply-for-company').'"> Apasati aici </a> pentru a aplica la prima companie.');
     echo('</div>'); 
     echo('<div id= societati-list>');
     echo("<ul>"); //tag-ul html pentru lista neordonata: https://www.w3schools.com/tags/tag_ul.asp
-    foreach ($employers as &$value) {
+    foreach ($employers as $value) {
         $name=get_user_by('id', $value); //obtinem utilizatorul cu id-ul dat
         echo("<li><a class='btn btn-primary' data-bs-toggle='collapse' href='#multiCollapseExample".$value."' aria-expanded='false' aria-controls='multiCollapseExample1".$value."'>".$name->nickname."</a></li>"); 
         echo('<div style="display: inline-block" class="collapse multi-collapse" id="multiCollapseExample'.$value.'"><div class="card card-body">');
@@ -76,14 +76,14 @@ function get_p_style(){
             'meta_key'=>'owner',
             'meta_value'=>$value,  
         ]);
-        foreach($company_products as &$company_product){ 
+        foreach($company_products as $company_product){ 
             $product_url=get_permalink($company_product->ID);
             echo('<div style="display: inline-block">');
             echo('<a href="'.$product_url.'">'.$company_product->post_title.'</a><br>');
             echo('</div>');
         }
         echo("</div></div>");
-    } //god help me
+    }
     echo("</ul");
     echo('</div>');
     }

@@ -57,16 +57,16 @@
         if(document.getElementById("status_order"+order_id).value!='selected'){
             jQuery.ajax({
                 type: "POST",
-                action: "mark_as_seen",
                 data: {order_id:order_id, order_status:document.getElementById("status_order"+order_id).value},
             });
     }
 }
 </script>
 <?php
-    if(isset($_POST['order_id'])){
+    if(isset($_POST['order_id'])&&isset($_POST['order_status'])){
         $order=wc_get_order((int)$_POST['order_id']);
-        $order->set_status($_POST['order_status']);
+        
+        if($order != false) $order->set_status($_POST['order_status']);
     }
 ?>
 <?php BsWp::get_template_parts( array( 

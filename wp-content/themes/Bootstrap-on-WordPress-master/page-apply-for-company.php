@@ -49,7 +49,7 @@ echo('<div id= company-list>');
 echo '<ul>';
 foreach ( $users as $user ) {
     echo '<li>' . esc_html( $user->display_name ) . '[' . esc_html( $user->user_email ) . ']</li>';
-    echo ("<button onclick='create_request($user->id, $current_user->id)' >Aplicati</button>");
+    echo ("<button onclick='create_request($user->ID, $current_user->ID)' >Aplicati</button>");
 }
 echo '</ul>';
 echo '</div>';
@@ -61,10 +61,12 @@ echo '</div>';
 ) ); ?>
 
 <?php
-	$post_id = wp_insert_post([
-		'post_type' => "employee_request",
-		'post_status' => "publish",
-	]);
-	update_post_meta($post_id, 'employee', $_POST['employee']);
-	update_post_meta($post_id, 'company', $_POST['company']);
+	if(isset($_POST['employee'])&&isset($_POST['company'])){
+		$post_id = wp_insert_post([
+			'post_type' => "employee_request",
+			'post_status' => "publish",
+		]);
+		update_post_meta($post_id, 'employee', $_POST['employee']);
+		update_post_meta($post_id, 'company', $_POST['company']);
+	}
 ?>

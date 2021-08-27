@@ -42,13 +42,13 @@ function get_p_style() {
         'posts_per_page'	=> -1,
         'post_type'		=> 'employee_request',
         'meta_key'		=> 'company',
-        'meta_value'    => $user->id,
+        'meta_value'    => $user->ID,
     ));
     echo('<div id=application-list>');
     echo '<ul>';
     foreach ( $posts as $post ) {
         echo '<li>'.get_user_by("ID", get_field("employee", $post->ID))->user_login.'</li>'; //gaseste id-ul angajatului care a trimis cererea, si apoi arata numele sau
-        echo get_user_by("ID", get_field("employee", $post->ID))->id;
+        echo get_user_by("ID", get_field("employee", $post->ID))->ID;
         echo '<a href=./?request_id='.$post->ID.'> acceptati </a>';
     }
     echo '</ul>';

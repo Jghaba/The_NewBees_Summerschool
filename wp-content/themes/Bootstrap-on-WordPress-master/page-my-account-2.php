@@ -32,7 +32,7 @@
 </div>
 
 <?php
-    include('company-map.php');
+    //include('company-map.php');
 ?>
 <?php BsWp::get_template_parts( array( 
 	'parts/shared/footer',

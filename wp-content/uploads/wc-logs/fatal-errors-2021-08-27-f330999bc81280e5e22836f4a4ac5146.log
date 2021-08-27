@@ -1,0 +1,8 @@
+2021-08-27T12:57:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_product_type() in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php:38
+Stack trace:
+#0 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-blog-header.php(19): require_once('C:\\Users\\Oana\\D...')
+#2 C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\index.php(17): require('C:\\Users\\Oana\\D...')
+#3 {main}
+  thrown in C:\Users\Oana\Documents\GitHub\The_NewBees_Summerschool\wp-content\themes\Bootstrap-on-WordPress-master\page-products.php on line 38
+

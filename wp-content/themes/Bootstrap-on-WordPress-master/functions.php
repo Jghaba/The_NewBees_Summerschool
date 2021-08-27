@@ -270,7 +270,7 @@
 	);
 
 	add_filter('show_admin_bar', '__return_false');
-	/*
+
 	function add_order_owner($order_id){ //functia asta adauga ca 'order_owner' pe compania care detine produsele comandate
 		while(is_null(wc_get_order($order_id)->get_items())) sleep(1);
 		$order=wc_get_order($order_id);

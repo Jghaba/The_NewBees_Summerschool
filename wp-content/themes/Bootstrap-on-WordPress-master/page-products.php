@@ -35,13 +35,14 @@
                                       esc_attr( $product->get_id() ),
                                       esc_attr( $product->get_sku() ),
                                       $product->is_purchasable() ? 'add_to_cart_button' : '',
-                                      esc_attr( $product->product_type ),
+                                      esc_attr( $product->get_type()),
                                       esc_html( $product->add_to_cart_text() )
                                   ),
                                   $product
                               );?>
                           </ul>
-                      </div>                     <?php endwhile;
+                      </div>                     
+                      <?php endwhile;
               } else {
                   echo __( ' o products found' );
               }
