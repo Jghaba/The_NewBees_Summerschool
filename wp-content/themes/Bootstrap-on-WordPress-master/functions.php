@@ -270,10 +270,13 @@
 	);
 
 	add_filter('show_admin_bar', '__return_false');
-	
+	/*
 	function add_order_owner($order_id){ //functia asta adauga ca 'order_owner' pe compania care detine produsele comandate
+		while(is_null(wc_get_order($order_id)->get_items())) sleep(1);
 		$order=wc_get_order($order_id);
-		$order_product=($order->get_items()[1]); //obtinem primul produs din comanda, din care scoatem owner-ul	
+		$order_product=($order->get_items()[-1]); //obtinem primul produs din comanda, din care scoatem owner-ul	
+		error_log(print_r($order_id));
+		error_log(print_r($order->get_items()));
 		$product_owner=get_field('owner', $order_product->get_product_id()); //obtine id-ul owner-ului pentru primul produs
 		//ignora faptul ca probabil da eroare; metoda merge si iti da id-ul produsului;
 		//repet: IGNORATI EROAREA. E O PROBLEMA CU INTELEPHENSE. FUNCTIA E OK SI MERGE
@@ -309,6 +312,7 @@
 		$order=wc_get_order($order_id);
 		$order_products=($order->get_items());
 		foreach($order_products as &$order_product){
+			if($order_product !== null){
 			$product_id=$order_product->get_product_id(); //obtinem id-ul produsului actual
 			$product=wc_get_product($product_id);
 			//acum ca avem produsul ca obiect, vom verifica stocul sau. Daca este sub 10, de exemplu, vom creea o postare de tip notificare pt owner-ul produsului 
@@ -324,8 +328,8 @@
 				do_action('new_notif_alert', $notif_id);
 			}
 		}
-	};
-
+	}
+	};*/
 	function notif_alert($notif_id){
 		if(wp_get_current_user()->ID==get_field('notification_user',$notif_id)){
 			$notification=get_post($notif_id);
@@ -333,11 +337,11 @@
 		}
 	};
 	
-	add_action('new_notif_alert', 'notif_alert', 8);
-	add_action('woocommerce_new_order', 'add_order_owner', 5);
-	add_action('woocommerce_new_order', 'new_order_notif', 6);
-	add_action('woocommerce_new_order', 'check_stock', 7);
-
+/*
+	add_action('woocommerce_checkout_order_processed', 'add_order_owner', 10);
+	add_action('woocommerce_checkout_order_processed', 'new_order_notif', 10);
+	add_action('woocommerce_checkout_order_processed', 'check_stock', 10); */
+	add_action('new_notif_alert', 'notif_alert', 10);
 	//todo: let companies assign orders to employees, let employees change order status 
 	//P.S. on order page, i should use the load_template function to change templates 
 ?>

@@ -140,7 +140,12 @@ the_post();
     function refresh_element(element_id){
       document.getElementById("div"+element_id).removeAttribute("class");
     };
-</script>*/ ?>
+</script>*/ 
+
+    $order=wc_get_order(126);
+    var_dump($order->get_items());
+?>
+
 <div class="alert alert-info">
   <h5><?=get_the_title()?></h5>
   <a><?=get_the_content()?><a>

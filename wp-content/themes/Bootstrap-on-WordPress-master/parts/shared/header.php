@@ -45,6 +45,14 @@
 		background-color:blue;
 	}
 </style>
+
+<script>
+    function refresh_element(element_id){
+      document.getElementById("div"+element_id).removeAttribute("class");
+    };
+</script>
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,4 +120,10 @@
   <br/>
 </div> 
 
-
+<?php
+  if(isset($_POST['notif_id'])){
+	$notif_id=$_POST['notif_id'];
+	var_dump($notif_id);
+	update_field("seen", 1, $_POST['notif_id']);
+  }
+?>
